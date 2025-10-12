@@ -1,4 +1,4 @@
-/*
+    /*
 paleta de colores 
 #ffffff
 #3bc156
@@ -75,13 +75,35 @@ p{
 .menu ul li a:hover{
     color: #3bc156;
 }
+/* tooltip */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #ffffff;
+  color: #000000;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
 /*hero*/
 .hero{
     position: relative;
     background-image: linear-gradient(
-    #00000050, 
-    #b4b4b400
-    ),url("./imagenes/footer.png");
+    #000000b0, 
+    #00000057
+    ),url("../img/banner.png");
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -108,14 +130,18 @@ p{
 .hero h1 {
     font-size: 48px;
     font-weight: 700;
+    padding-bottom: 20px;
 }
 .hero p {
-    font-size: 20px;
+    font-size: 30px;
     margin-bottom: 30px;
+    font-weight: 700;
+    color: #3bc156;
 }
 .hero-buttons {
     display: flex;
     gap: 15px;
+    color: #3bc156;
 }
 .hero-buttons a{
     list-style: none;
