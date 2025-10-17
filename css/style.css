@@ -1,4 +1,4 @@
-    /*
+/*
 paleta de colores 
 #ffffff
 #3bc156
@@ -56,13 +56,15 @@ p{
     }
 }
 .menu{
+    display: flex;
     flex: 2;
 }
 .menu ul{
     display: flex;
     justify-content: center;
+    align-items: center;
     list-style: none;
-    gap: 30px;
+    gap: 50px;
 }
 .menu ul li a{
     text-decoration: none;
@@ -74,6 +76,31 @@ p{
 }
 .menu ul li a:hover{
     color: #3bc156;
+}
+.enter-container{
+    display: inline-flex;
+    gap: 12px;
+    padding: 12px 20px;
+    background-color: #3bc156;
+    border-radius: 9999px;
+    margin: 20px auto;
+    color: #ffffff;
+    align-items: center;
+    justify-content: center;
+}
+.enter-container a{
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.enter-container a:focus{
+    outline: 3px solid #ffffff40;
+    outline-offset: 2px;
+}
+.enter-container i{
+    font-size: 20px;
+    color: #ffffff;
 }
 /* tooltip */
 .tooltip {
@@ -145,6 +172,8 @@ p{
 }
 .hero-buttons a{
     list-style: none;
+    text-decoration: none;
+    color: #2bb5f4;
 }
 /*inicio*/
 .Inicio{
@@ -165,27 +194,6 @@ p{
     padding: 40px;
     max-width: 1200px;
     margin: 0 auto;
-}
-.enter-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #3bc156;
-    padding: 12px 20px;
-    width: fit-content;
-    border-radius: 10%;
-    margin: 20px auto;
-    color: #ffffff;
-}
-.enter-container a{
-    text-decoration:none;
-    color: #ffffff;
-    font-weight: bold;
-    margin-left: 20px;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-.enter-container i{
-    font-size: 20px;
 }
 .bloque-secudario .texto{
     flex: 1 ;
@@ -226,12 +234,15 @@ p{
     flex-wrap: wrap;
     gap: 30px;
     justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 .contenedor-tarjetas article{
     background: #ffffff;
     border-top: 5px solid #3bc156 ;
     border-radius: 12px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 16px #0000001a;
     padding: 20px;
     text-align: center;
     flex: 1 1 300px;
@@ -239,10 +250,11 @@ p{
 }
 .contenedor-tarjetas article:hover{
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 20px #00000033;
 }
 .contenedor-tarjetas img{
-    width: 250px;
+    max-width: 250px;
+    width: 100%;
     height: auto;
     margin-bottom: 15px;
 }
@@ -266,9 +278,40 @@ p{
   font-weight: bold;
   transition: background 0.3s ease;
 }
- 
 .contenedor-tarjetas a:hover {
   background-color: #2bb5f4;
+}
+@media (prefers-reduced-motion: reduce) {
+    .contenedor-tarjetas article {
+        transition: none;
+    }
+}
+.contenedor-tarjetas a:focus {
+    outline: 3px solid rgba(59,193,86,0.25);
+    outline-offset: 3px;
+}
+/* Numero de tarjetas mostradas */
+/* Pc: 3 */
+@media (min-width: 1024px) {
+    .contenedor-tarjetas article {
+        flex: 0 1 calc((100% - 60px) / 3);
+    }
+}
+/* Tablet: 2 */
+@media (min-width: 600px) and (max-width: 1023px) {
+    .contenedor-tarjetas article {
+        flex: 0 1 calc((100% - 30px) / 2);
+    }
+}
+/* Celular: 1 */
+@media (max-width: 599px) {
+    .contenedor-tarjetas article {
+        flex: 0 1 100%;
+    }
+    .contenedor-tarjetas {
+        gap: 20px;
+        padding: 10px;
+    }
 }
 .Sugerencias-cocina, 
 .Sugerencias-habitacion, 
@@ -295,10 +338,10 @@ p{
 }
 /*footer*/
 .footer-paginaweb{
-    background: #ffffff;
-    color: #000000;
-    padding: 40px 20px 0 20px ;
-    border-top: 2px solid #00000052;
+    background-color: #4a4a4a; /* fondo negro pedido */
+    color: #ffffff;
+    padding: 24px 0; /* evitar height fijo y dar espacio vertical */
+    border-top: 2px solid #ffffff0f;
 }
 .footer-content{
     display: flex;
@@ -308,27 +351,27 @@ p{
     max-width: 1200px;
     margin: 0 auto;
     gap: 40px;
+    padding: 0 20px; /* padding lateral para móviles */
 }
 .footer-logo{
-    margin-right: 200px;
+    margin-right: 0; /* eliminar offset grande que rompe en móviles */
 }
 .footer-logo img{
-    width: 280px;
-    margin-bottom: 10px;
-    margin: 0 auto;
+    width: 150px;
+    margin: 0 auto 10px; /* centrado y espacio inferior */
     border-radius: 20%;
 }
 .footer-logo p{
     text-align: center;
     max-width: 260px;
     font-size: 16px;
-    color: #000000;
+    color: #ffffff;
     font-weight: 600;
 }
 .titulo-fila{
     font-size: 20px;
     font-weight: 700;
-    color: #000000;
+    color: #2bb5f4;
     margin-bottom: 20px;
 }
 .footer-acerca-de ul, .footer-sabermas ul, .footer-contactanos ul{
@@ -340,13 +383,17 @@ p{
     margin-bottom: 8px;
 }
 .footer-acerca-de ul li a, .footer-sabermas ul li a, .footer-contactanos ul li a{
-    color: #00000083;
+    color: #ffffffd9;
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3 ease;
+    transition: color 0.2s ease;
 }
 .footer-acerca-de ul li a:hover, .footer-sabermas ul li a:hover, .footer-contactanos ul li a:hover{
     color: #3bc156;
+}
+.footer-acerca-de ul li a:focus, .footer-sabermas ul li a:focus, .footer-contactanos ul li a:focus{
+    outline: 3px solid #3bc1562e;
+    outline-offset: 3px;
 }
 .footer-social{
     text-align: center;
@@ -356,17 +403,30 @@ p{
     display: inline-block;
     margin-right: 50px;
 }
-.footer-social img{
+.footer-social i{
     width: 34px;
     height: 34px;
     filter: brightness(1) invert(0);
     transition: transform 0.3s ease;
     margin-top: 20px;
 }
-.footer-social img:hover{
+.footer-social i:hover{
     transform: scale(1.2);
 }
+.fa-brands.fa-linkedin {
+  color: #ffffff;
+  font-size: 34px;
+}
+.fa-brands.fa-facebook {
+  color: #ffffff;
+  font-size: 34px;
+}
+.fa-brands.fa-instagram {
+  color: #ffffff;
+  font-size: 34px;
+}
 .footer-bottom{
+    background-color: #ffffff;
     text-align: center;
     padding: 2% 0;
     border-top: 2px solid #0000008c;
