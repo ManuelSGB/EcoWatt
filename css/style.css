@@ -189,7 +189,7 @@ p{
   transform: translateY(-50%);
 }
 .botones-accesibilidad button {
-  background-color: #4b4949;
+  background-color: #2bb5f4;
   color: white;
   border: none;
   padding: 10px;
@@ -199,7 +199,7 @@ p{
   transition: 0.3s;
 }
 .botones-accesibilidad button:hover {
-  background-color: #bf0f30;
+  background-color: #3bc156;
 }
 
 .Inicio{
