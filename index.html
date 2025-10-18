@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EcoWatt</title>
-    <link rel="stylesheet" href="./css/Estylos.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="shortcut icon" href="./img/icono.jpeg" />
+    <script src="https://kit.fontawesome.com/717aae7684.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header class="header-principal">
@@ -18,31 +19,39 @@
             <ul>
                 <li><a href="#Inicio">Inicio</a></li>
                 <li><a href="#calculadora">Calculadora</a></li>
-                <li class="tooltip"><a href="#E-Renovable">E.Renovable</a>
-                <span class="tooltiptext">Energia Renovable</span></li>
+                <li class="tooltip">
+                    <a href="#E-Renovable">E.Renovable</a>
+                     <span class="tooltiptext">Energia Renovable</span>
+                </li>
                 <li><a href="#Sugerencias">Sugerencias</a></li>
             </ul>
+            <!--foro-->
+            <div class="enter-container">
+                <i class="ingresofa-solid fa-solid fa-circle-user"></i> 
+                <a href="./page/foro.html"><strong>Foro</strong></a>
+            </div>
         </nav>
-        <!--foro-->
-        <div class="enter-container">
-            <i class="ingresofa-solid fa-circle-user">
-                <a href="#"><strong>foro</strong></a></i>
-        </div>
     </header>
     <main>
         <!--hero-->
         <section class="hero">
             <div class="hero-content">
                 <h1>Ahorro de Energia</h1>
-                <p>conoce tu consumo de energia y aprende a <br>
+                <p>Conoce tu consumo de energia y aprende <br> a 
                     gestionarlo de la mejos manera</p>
                 <div class="hero-buttons">
-                    <a href="#">Explorar mas</a>
-                    <a href="#">contactanos</a>
+                    <a href="#">Explorar más</a>
+                    <a href="./page/formulario.html">Contáctanos</a>
                 </div>
             </div>
         </section>
         <!--inicio-->
+        <div class="botones-accesibilidad">
+            <button id="aumentarFuente">A+</button>
+            <button id="disminuirFuente">A-</button>
+            <button id="contraste">🌙</button>
+        </div>
+        <script src="./js/accesibilidad.js"></script>
         <section class="Inicio" id="Inicio">
             <article class="Inicio-contenido">
                 <div class="texto">
@@ -69,7 +78,7 @@
                        de gases contaminantes que contribuyen al
                        cambio climático, protegiendo el medio
                        ambiente y preservando los recursos
-                       naturales para las futuras generaciones
+                       naturales para las futuras generaciones.
                     </p>
                        <p>
                         Además, el ahorro de energía ayuda a reducir
@@ -111,7 +120,35 @@
                     cuánto consumes en kilovatios-hora (kWh), la unidad con la que generalmente se 
                     mide el consumo energético en tu factura eléctrica.
                     </p>
+                </div> <br><br>
+
+                <div class="bloque-secudario">
+                    <div class="texto">
+                        <header class="titulo">
+                        <h2 class="titulo">Uso de calculadora</h2>
+                    </header>
+                    <p>
+                    Para medir el consumo de tus aparatos electrónicos ingresar el voltaje de tu dispositivo
+                    en watt (W) como se muestra en la imagen y registra el tiempo que usas el dispositivo en horas.
+                    </p> <br><br>
+                    <p>
+                    La calculadora te dará dos resultados el primer resultado es el consumo en kilovatio-hora 
+                    (kWh) El segundo resultado es el valor de consumo en pesos del uso del aparato en el tiempo que 
+                    registraste
+                    </p><br>
+                    </div>
+                    <div class="imagen">
+                    <img src="./img/panel de ejemplo.png" alt="Ejemplo de panel de Watts">
+                    </div>
                 </div>
+                <div class="calculator">
+                    <input type="number" id="numero1" placeholder="Registre los W"> 
+                    <input type="number" id="numero2" placeholder="Horas de uso"> 
+                    <button onclick="realizarCalculo()">consultar consumo</button><br><br>
+                    <p>El consumo eléctrico de este dispositivo es de: <span id="consumo"></span> kWh </p><br><br>
+                    <p>El costo que genera el dispositivo es de: $<span id="costo"></span></p>
+                </div>
+            <script src="./js/calculadora.js"></script>
             </article>
         </section>
         <!--primer contenido-->
@@ -130,7 +167,7 @@
                         <img src="./img/ecowatt2.png" alt="energiarenovable">
                     </div>
                     <p>
-                        Las energias renovables, se caracterizan por no utilizar combustibles 
+                        Las energias renovables se caracterizan por no utilizar combustibles 
                         fosiles, sino recursos naturales capaces de renovarse ilimitadamente.
                     </p><br>
                     <p>
@@ -141,13 +178,13 @@
                          de la humanidad.
                     </p>
                 </div>
-                <div class="E-Renovable-contenido-dos">
-                    <div class="texto">
+                <div class="bloque-secudario">
+                    <div class="recuerda">
                         <header class="titulo">
-                            <h2>recuerda</h2>
+                            <h2>Recuerda</h2>
                         </header>
                         <p>
-                         El petróleo, el gas natural, el carbón y la energía nuclear no son energías 
+                         El petróleo, el gas natural, y el carbón no son energías 
                          renovables. Estas fuentes se agotan con el tiempo y generan un alto impacto 
                          ambiental. Opta por energías limpias como la solar, eólica o hidráulica para 
                          cuidar el planeta.
@@ -167,31 +204,31 @@
                     <h2 class="titulo">Sugerencias energeticas</h2>
                 </header>
                </div>
-               <!--targetas-->
+              <!--tarjetas-->
                <div class="contenedor-tarjetas">
-                <!--trageta cocina-->
+                <!--tarjeta cocina-->
                 <article>
                     <figure>
                         <img src="./img/cocina.jpeg" alt="cocina">
-                        <figcaption>cocina</figcaption>
+                        <figcaption>Cocina</figcaption>
                     </figure>
                     <p>Sugerencias de ahorro para la cocina</p>
                     <a href="#cocina">Ver más</a>
                 </article>
-                <!--targeta habitacion-->
+                <!--tarjeta habitacion-->
                 <article>
                     <figure>
                         <img src="./img/cuarto.jpeg" alt="habitacion">
-                        <figcaption>habitación</figcaption>
+                        <figcaption>Habitación</figcaption>
                     </figure>
                     <p>Sugerencias de ahorro para la habitación</p>
                     <a href="#habitacion">Ver más</a>
                 </article>
-                <!--targeta baño-->
+                <!--tarjeta baño-->
                 <article>
                     <figure>
                         <img src="./img/baño.jpeg" alt="bano">
-                        <figcaption>baño</figcaption>
+                        <figcaption>Baño</figcaption>
                     </figure>
                     <p>Sugerencias de ahorro para el baño</p>
                     <a href="#bano">Ver más</a>
@@ -201,20 +238,20 @@
                <div class="Sugerencias-cocina" id="cocina">
                 <div class="texto">
                     <header class="titulo">
-                        <h2>cocina</h2>
+                        <h2>Cocina</h2>
                     </header>
                     <p>
                       Para ahorrar energía en la cocina, utiliza electrodomésticos eficientes (de preferencia 
                       con etiqueta energética A o superior) y evita abrir el horno innecesariamente mientras 
                       cocinas, ya que cada vez que lo haces se pierde calor. Cocina con tapas en las ollas para 
                       conservar el calor y aprovecha el tamaño adecuado de hornilla según el recipiente. Además, 
-                      descongela los alimPara ahorrar energía en la cocina, utiliza electrodomésticos eficientes 
+                      descongela los alimentos con tiempo para no usar el microondas y apaga los aparatos que 
+                      no estés utilizando. Para ahorrar energía en la cocina, utiliza electrodomésticos eficientes 
                       (de preferencia con etiqueta energética A o superior) y evita abrir el horno innecesariamente 
                       mientras cocinas, ya que cada vez que lo haces se pierde calor. Cocina con tapas en las 
                       ollas para conservar el calor y aprovecha el tamaño adecuado de hornilla según el recipiente. 
                       Además, descongela los alimentos con tiempo para no usar el microondas y apaga los aparatos 
-                      que no estés utilizando.entos con tiempo para no usar el microondas y apaga los aparatos que 
-                      no estés utilizando.  
+                      que no estés utilizando.
                     </p>
                 </div>
                 <div class="imagen">
@@ -224,7 +261,7 @@
                <div class="Sugerencias-habitacion" id="habitacion">
                 <div class="texto">
                     <header class="titulo">
-                        <h2>habitación</h2>
+                        <h2>Habitación</h2>
                     </header>
                     <p>
                       En las habitaciones, aprovecha al máximo la luz natural durante el día y utiliza focos LED 
@@ -241,7 +278,7 @@
                <div class="Sugerencias-bano" id="bano">
                 <div class="texto">
                     <header class="titulo">
-                        <h2>baño</h2>
+                        <h2>Baño</h2>
                     </header>
                     <p>
                       En el baño, reduce el uso del calentador de agua bajando unos grados la temperatura y tomando 
@@ -259,6 +296,7 @@
         </section>
     </main>
     <!--footer-->
+ 
    <footer class="footer-paginaweb">
         <div class="footer-content">
             <div class="footer-logo">
@@ -270,11 +308,11 @@
                 <ul>
                     <li><a href="#Inicio">Inicio</a></li>
                     <li><a href="#calculadora">Calculadora</a></li>
-                    <li><a href="#">foro</a></li>
+                    <li><a href="./page/foro.html">Foro</a></li>
                 </ul>
             </nav> 
             <nav class="footer-sabermas">
-                <p class="titulo-fila">Sabermas</p>
+                <p class="titulo-fila">Saber más</p>
                 <ul>
                     <li><a href="#E.Renovable">Energia Renovable</a></li>
                     <li><a href="#Sugerencias">Sugerencias</a></li>
@@ -291,19 +329,19 @@
         </div>
          <div class="footer-social">
                 <a href="#" aria-label="ir al perfil de Colombia viva en Facebook">
-                    <img src="./img/facebook.png" alt="Facebook">
+                    <i class="fa-brands fa-facebook"></i>
                 </a>
                 <a href="#">
-                    <img src="./img/Instagram.png" alt="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
                 </a>
                 <a href="#">
-                    <img src="./img/Inlink.png" alt="Inlink">
+                    <i class="fa-brands fa-linkedin"></i>
                 </a>
             </div>   
+    </footer>
         <div class="footer-bottom">
             <p>&copy; 2025 Document . Todos los derechos reservados.</p>
-            <p>frase de la tematica de la paqina </p>
+            <p>Developed by Michael Grillo / Manuel Galindo / Brayan Morales</p>
         </div>
-    </footer>
 </body>
 </html>

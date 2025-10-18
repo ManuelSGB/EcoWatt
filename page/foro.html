@@ -1,0 +1,137 @@
+<!-- gemini.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoWatt</title>
+    <link rel="stylesheet" href="../css/foro.css">
+    <link rel="shortcut icon" href="../img/icono.jpeg" />
+    <script src="https://kit.fontawesome.com/717aae7684.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header-principal">
+        <!--logo-->
+        <div class="logo-container">
+            <img src="../img/EcoWatt.jpeg" alt="logocon nombre" class="logo">
+        </div>
+        <!--menu-->
+        <nav class="menu">
+            <ul>
+                <li><a href="../index.html#Inicio">Inicio</a></li>
+                <li><a href="../index.html#calculadora">Calculadora</a></li>
+                <li class="tooltip">
+                    <a href="../index.html#E-Renovable">E.Renovable</a>
+                     <span class="tooltiptext">Energia Renovable</span>
+                </li>
+                <li><a href="../index.html#Sugerencias">Sugerencias</a></li>
+            </ul>
+            <!--foro-->
+            <div class="enter-container">
+                <i class="ingresofa-solid fa-solid fa-circle-user"></i> 
+                <a href="#"><strong>Foro</strong></a>
+            </div>
+        </nav>
+    </header>
+    <div class="botones-accesibilidad">
+            <button id="aumentarFuente">A+</button>
+            <button id="disminuirFuente">A-</button>
+            <button id="contraste">🌙</button>
+    </div>
+    <div class="layout">
+        <main class="forum">
+            <h2>Foro</h2>
+
+            <form id="postForm" class="post-form" autocomplete="off">
+                <input type="text" id="title" placeholder="Título" required />
+                <textarea id="message" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
+                <div class="form-row">
+                    <input type="text" id="author" placeholder="Tu nombre (opcional)" />
+                    <button type="submit">Publicar</button>
+                </div>
+            </form>
+
+            <ul id="posts" class="posts">
+                <li class="post">
+                    <div class="meta"><span class="author">EcoWatt</span></div>
+                    <p><strong>Bienvenido al foro de EcoWatt. Comparte ideas y resuelve dudas con la comunidad</strong></p>
+                </li>
+            </ul>
+        </main>
+
+        <aside class="sidebar">
+            <div class="chat-wrap">
+                <div class="chat-title">Chatbot</div>
+                <!-- Contenedor donde podrás integrar tu chatbot -->
+                    <div class="contenedor">
+                        <h1>Chatbot con Gemini</h1>
+                        <div>
+                        <textarea id="consulta"></textarea>
+                        </div>
+                        <button type="button" id="botonConsulta">Consultar</button>
+                        <pre id="resultadoConsulta"></pre>
+                    </div>
+            </div>
+
+        </aside>
+    </div>
+        <!--footer-->
+   <footer class="footer-paginaweb">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="../img/logo.jpeg" alt="logo-principla">
+                <p>EcoWatt</p>  
+            </div>
+            <nav class="footer-acerca-de">
+                <p class="titulo-fila">Acerca de</p>
+                <ul>
+                    <li><a href="../index.html#Inicio">Inicio</a></li>
+                    <li><a href="../index.html#calculadora">Calculadora</a></li>
+                    <li><a href="foro.html">Foro</a></li>
+                </ul>
+            </nav> 
+            <nav class="footer-sabermas">
+                <p class="titulo-fila">Saber más</p>
+                <ul>
+                    <li><a href="../index.html#E-Renovable">Energia Renovable</a></li>
+                    <li><a href="../index.html#Sugerencias">Sugerencias</a></li>
+                </ul>
+            </nav>  
+            <nav class="footer-contactanos">
+                <p class="titulo-fila">Contáctanos</p>
+                <ul>
+                    <li><a href="#">ecowatt@gmail.com</a></li>
+                    <li><a href="#">Instagram: @ecowattco</a></li>
+                    <li><a href="#">Facebook: EcoWattCo</a></li>
+                </ul>
+            </nav>           
+        </div>
+         <div class="footer-social">
+                <a href="#" aria-label="ir al perfil de Colombia viva en Facebook">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </div>   
+    </footer>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Document . Todos los derechos reservados.</p>
+            <p>Developed by Michael Grillo / Manuel Galindo / Brayan Morales</p>
+        </div>
+
+        <script type="importmap">
+            {
+            "imports": {
+                "@google/generative-ai": "https://esm.run/@google/generative-ai"
+            }
+            }
+        </script>
+        <script src="../js/foro.js"></script>
+        <script type="module" src="../js/gemini.js"></script>
+        <script src="../js/accesibilidad.js"></script>
+    </body>
+    </html>
